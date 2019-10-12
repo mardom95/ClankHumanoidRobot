@@ -25,3 +25,4 @@ Laptop side:
 
   rosrun bioloid_planning plannin_manager.py
 
+Thanks to @dxydas, these packages are an extension of his work !
