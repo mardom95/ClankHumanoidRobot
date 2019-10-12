@@ -1,0 +1,12 @@
+<launch>
+    <arg name="port" default="/dev/ttyACM0"/>
+    <!-- Load universal robot description format (URDF) -->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find bioloid_master)/urdf/bioloid.xacro' --inorder" />
+    <!-- Given the published joint states, publish tf for the robot links -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" respawn="true" output="screen" />
+    <!--node pkg="rosserial_python" type="serial_node.py" name="serial_node" args="_port:=$(arg port)"/-->
+    <node pkg="bioloid_sensors_interface" type="imu_tf_broadcaster" name="imu_tf_broadcaster" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/mario/catkin_ws/src/bioloid_sensors_interface/rviz/gyro.rviz" required="true"/>
+
+</launch>
