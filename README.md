@@ -1,4 +1,4 @@
-![Clank](/Clank.png?raw=true style=centerme "Clank Robot")
+![Clank](/Clank.png?style=centerme "Clank Robot")
 
 Please refer to the following link to see the videos:
     
