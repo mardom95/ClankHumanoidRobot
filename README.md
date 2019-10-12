@@ -1,19 +1,14 @@
-#Orden de lanzamiento de las cosas
+FIRST STEPS
 
-ANTES DE LANZAR NADA
+* Ensure all the motors are connected to the robot.
 
-* Asegurarse de que TODOS los servomotores están conectados (al menos los AX, los XL no es necesario), sino el control hardware
-les mueve alatoriamente y puede romperse el robot
+* Ensure to have conection with the Rpi, via Ethernet or Wifi, to be able to listen to topics
 
-* Asegurarse de tener conectado a través de ethernet el robot, cuya IP es la 11, y el pc tiene que tener la 10. En caso de 
-usar wifi cambiar el network interfaces del robot y poner IP fija del portátil a la 11. Se recomienda el uso de ethernet
-sobre todo si se va a hacer seguimiento de caras
+Laptop side:
 
-En el laptop:
+* export ROS_IP=192.168.1.X in bashrc
 
-* En todos los terminales export ROS_IP=192.168.1.10 con la dirección de hostname -I
-
-* Lanzar, en distintos terminales:  
+* Launch:  
 
   roscore
 
@@ -21,26 +16,12 @@ En el laptop:
 
   roslaunch bioloid_master bioloid_controllers.launch
 
-
-* Ahora en la rpi, en un terminal:
-  
-  export ROS_IP=192.168.1.11 con la dirección de hostname -I
-
-  export ROS_MASTER_URI=http://192.168.1.10:11311 con la dirección IP del LAPTOP
-
-  roslaunch usb2ax_controller hw_controller.launch
-
-* Ahora en la rpi, en otro terminal:
-
-  export ROS_IP=192.168.1.11 con la dirección de hostname -I
-
-  export ROS_MASTER_URI=http://192.168.1.10:11311 con la dirección IP del LAPTOP
-
-  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM1
+* Rpi has a service called usb2ax service that launches everything:
 
 
-* FInalmente, de nuevo en el laptop:
+* For the gesture control, launch in laptop:
 
   roslaunch bioloid_moveit_config bioloid_planning_execution.launch
 
   rosrun bioloid_planning plannin_manager.py
+
