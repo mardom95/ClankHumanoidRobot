@@ -1,5 +1,9 @@
 ![Clank](/Clank.png?raw=true "Clank Robot")
 
+Please refer to the following link to see the videos:
+    
+    https://www.youtube.com/playlist?list=PLaifSaoo3KyS3FFktKaQyA13W0rImoZuD 
+
 Clank has been 3D printed and has the following electronics:
 
 18 Dynamixel AX-12 for the body motion
