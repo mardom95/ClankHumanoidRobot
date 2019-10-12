@@ -1,5 +1,15 @@
 ![Clank](/Clank.png?raw=true "Clank Robot")
 
+Clank has been 3D printed and has the following electronics:
+
+18 Dynamixel AX-12 for the body motion
+2 Dynamixel XL-320 for head degrees of freedom
+
+Mini IMU v5 Pololu
+Raspberry Pi 3bplus with Rpi Cam
+usb2ax peripheral
+OpenCM 9.04b to interface I2C IMU to Serial comm
+
 STEPS
 
 * Ensure all the motors are connected to the robot.
