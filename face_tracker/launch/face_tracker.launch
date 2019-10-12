@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="face_tracker" type="face_tracker_node" name="face_tracker_node" args="" output="screen"/>
+
+</launch>

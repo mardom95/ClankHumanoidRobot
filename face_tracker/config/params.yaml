@@ -1,0 +1,10 @@
+face_tracker:
+  camera_topic: camera/image
+  feedback_topic: bioloid/head_controller/state
+  command_topic: bioloid/head_controller/command
+	haar_cascade_path: /opt/ros/kinetic/share/OpenCV-3.3.1-dev/haarcascades/haarcascade_frontalface_default.xml
+  pan_joint: head_pan_joint
+  tilt_joint: head_tilt_joint
+  k_p_pan: 0.8
+  k_p_tilt: 0.8
+
