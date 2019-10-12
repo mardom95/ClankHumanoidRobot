@@ -1,4 +1,6 @@
-FIRST STEPS
+![Alt text](clank.png?raw=true "Clank Robot")
+
+STEPS
 
 * Ensure all the motors are connected to the robot.
 
