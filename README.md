@@ -1,4 +1,4 @@
-![Alt text](clank.png?raw=true "Clank Robot")
+![Clank](/Clank.png?raw=true "Clank Robot")
 
 STEPS
 
