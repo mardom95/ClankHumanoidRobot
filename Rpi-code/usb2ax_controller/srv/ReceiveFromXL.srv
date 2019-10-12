@@ -1,0 +1,5 @@
+uint16 dxlID
+uint16 address
+---
+uint16 value
+bool rxSuccess

@@ -1,0 +1,17 @@
+<launch>
+    <!-- Load robot description and start state publishers 
+    <arg name="dummy_imu" default="false"/>
+    <include file="$(find bioloid_master)/launch/bioloid_pubs.launch">
+        <arg name="dummy_imu" value="$(arg dummy_imu)"/>
+    </include>-->
+
+    <!-- Start USB2AX interface -->
+    <arg name="pos_control" default="true"/>
+    <arg name="device_index" default="1"/>
+    <arg name="baud_num" default="1"/>
+    <node pkg="usb2ax_controller" type="ax_joint_controller" name="ax_joint_controller" args="$(arg pos_control) $(arg device_index) $(arg baud_num)" output="screen"/>
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node" args="" output="screen">
+        <param name="port" value="/dev/ttyACM0"/>
+    </node>
+    <node pkg="opencv_example" type="opencv_example_node" name="opencv_example_node" args="" output="screen"/>
+</launch>
